@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6746A6A21D2EC3A200F8E677 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6746A6A11D2EC3A200F8E677 /* main.cpp */; };
+		677B89251D32896900CDAED2 /* SCLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 677B89231D32896900CDAED2 /* SCLinkedList.cpp */; };
+		67AED8F41D31AB0200C7881F /* DoubleLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67AED8F21D31AB0200C7881F /* DoubleLinkedList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		6746A69E1D2EC3A200F8E677 /* linkedListProblems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = linkedListProblems; sourceTree = BUILT_PRODUCTS_DIR; };
 		6746A6A11D2EC3A200F8E677 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		677B89231D32896900CDAED2 /* SCLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SCLinkedList.cpp; sourceTree = "<group>"; };
+		677B89241D32896900CDAED2 /* SCLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SCLinkedList.hpp; sourceTree = "<group>"; };
+		67AED8F21D31AB0200C7881F /* DoubleLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleLinkedList.cpp; sourceTree = "<group>"; };
+		67AED8F31D31AB0200C7881F /* DoubleLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DoubleLinkedList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				6746A6A11D2EC3A200F8E677 /* main.cpp */,
+				67AED8F31D31AB0200C7881F /* DoubleLinkedList.hpp */,
+				67AED8F21D31AB0200C7881F /* DoubleLinkedList.cpp */,
+				677B89241D32896900CDAED2 /* SCLinkedList.hpp */,
+				677B89231D32896900CDAED2 /* SCLinkedList.cpp */,
 			);
 			path = linkedListProblems;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6746A6A21D2EC3A200F8E677 /* main.cpp in Sources */,
+				67AED8F41D31AB0200C7881F /* DoubleLinkedList.cpp in Sources */,
+				677B89251D32896900CDAED2 /* SCLinkedList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +251,7 @@
 				6746A6A71D2EC3A200F8E677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
