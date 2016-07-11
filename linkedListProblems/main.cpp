@@ -180,5 +180,54 @@ int main(int argc, const char * argv[]) {
         head = head->next;
     }*/
     
+    /* divide doublelinkedlist in two halves
+    int A[6] = {6, 5, 4, 3, 2, 1};
+    DNodePtr head = nullptr;
+    DNodePtr a = nullptr;
+    DNodePtr b = nullptr;
+    for (int i = 0; i < 6; i++) {
+        insertNodeAtFrontOfDLL(head, A[i]);
+    }
+    splitDoublyLinkedListInToTwoHalves(head, a, b);
+    while (a != nullptr) {
+        cout << a->data << endl;
+        a = a->next;
+    }
+    cout << endl;
+    while (b != nullptr) {
+        cout << b->data << endl;
+        b = b->next;
+    }*/
+    
+    
+    /* merge two doubly linked list in sorted order
+    int N1[1] = {1};
+    int N2[8] = {12, 11, 10, 9, 8, 7, 6, 5};
+    DNodePtr n1P = nullptr;
+    DNodePtr n2P = nullptr;
+    for (int i = 0; i < 1; i++) {
+        insertNodeAtFrontOfDLL(n1P, N1[i]);
+    }
+    for (int i = 0; i < 8; i++) {
+        insertNodeAtFrontOfDLL(n2P, N2[i]);
+    }
+    DNodePtr an_head = mergeTwoDoublyLinkedLists(n1P, n2P);
+    while (an_head != nullptr) {
+        cout << an_head->data << endl;
+        an_head = an_head->next;
+    }*/
+
+    /* merge sort algo for doubly linked list
+    int A[6] = {6,5,3,1,2,4};
+    DNodePtr head = nullptr;
+    for (int i = 0; i < 6; i++) {
+        insertNodeAtFrontOfDLL(head, A[i]);
+    }
+    DNodePtr sorted = doublyLinkedListMergeSort(head);
+    while (sorted != nullptr) {
+        cout << sorted->data << endl;
+        sorted = sorted->next;
+    }*/
+    
     return 0;
 }

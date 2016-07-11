@@ -140,7 +140,7 @@ void reverseDoubleLinkedList(DNodePtr &head) {
 
 #pragma mark - merge sort
 
-DNodePtr mergeLinkedLists(DNodePtr X, DNodePtr Y) {
+DNodePtr mergeTwoDoublyLinkedLists(DNodePtr X, DNodePtr Y) {
     DNodePtr head = nullptr;
     DNodePtr tail = nullptr;
     
@@ -175,12 +175,18 @@ DNodePtr mergeLinkedLists(DNodePtr X, DNodePtr Y) {
             }
         }
         
+        if (dataPtr != nullptr) {
+            dataPtr->next = nullptr;
+            dataPtr->prev = nullptr;
+        }
+        
         if (head == nullptr) {
             head = dataPtr;
             tail = head;
         }else {
             DNodePtr temp = tail;
             temp->next = dataPtr;
+            dataPtr->prev = temp;
             tail = dataPtr;
         }
     }
@@ -188,7 +194,7 @@ DNodePtr mergeLinkedLists(DNodePtr X, DNodePtr Y) {
     return head;
 }
 
-void splitLinkedListInToTwoHalves(DNodePtr head, DNodePtr &a, DNodePtr &b) {
+void splitDoublyLinkedListInToTwoHalves(DNodePtr head, DNodePtr &a, DNodePtr &b) {
     
     if (head == nullptr) {
         return;
@@ -201,36 +207,37 @@ void splitLinkedListInToTwoHalves(DNodePtr head, DNodePtr &a, DNodePtr &b) {
     
     DNodePtr slow = head;
     DNodePtr fast = head;
-    DNodePtr prev = nullptr;
     
     while (fast != nullptr) {
-        prev = slow;
         slow = slow->next;
         fast = (fast->next == nullptr) ? fast->next : fast->next->next;
     }
+
+    DNodePtr prev = slow->prev;
     prev->next = nullptr;
+    slow->prev = nullptr;
     
     a = head;
     b = slow;
 }
 
-// not completed
-DNodePtr linkedListMergeSort(DNodePtr head) {
+DNodePtr doublyLinkedListMergeSort(DNodePtr head) {
     
     DNodePtr a = nullptr;
     DNodePtr b = nullptr;
     
-    splitLinkedListInToTwoHalves(head, a, b);
+    splitDoublyLinkedListInToTwoHalves(head, a, b);
     if (a->next != nullptr) {
-        linkedListMergeSort(a);
+        a = doublyLinkedListMergeSort(a);
     }
     if (b->next != nullptr) {
-        linkedListMergeSort(b);
+        b = doublyLinkedListMergeSort(b);
     }
-    head = mergeLinkedLists(a, b);
+    head = mergeTwoDoublyLinkedLists(a, b);
     return head;
 }
 
+#pragma mark - quick sort
 
 
 

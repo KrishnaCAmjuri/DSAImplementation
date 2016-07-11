@@ -36,4 +36,11 @@ void deleteAnodeAtPositionInDLL(DNodePtr &head, int pos);
 //reverse
 void reverseDoubleLinkedList(DNodePtr &head);
 
+//merge sort
+void splitDoublyLinkedListInToTwoHalves(DNodePtr head, DNodePtr &a, DNodePtr &b);
+
+DNodePtr mergeTwoDoublyLinkedLists(DNodePtr X, DNodePtr Y);
+
+DNodePtr doublyLinkedListMergeSort(DNodePtr head);
+
 #endif /* DoubleLinkedList_hpp */

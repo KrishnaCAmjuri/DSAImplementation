@@ -324,6 +324,7 @@ KNodePtr mergeLinkedLists(KNodePtr X, KNodePtr Y) {
         }else {
             KNodePtr temp = tail;
             temp->next = dataPtr;
+            
             tail = dataPtr;
         }
     }
@@ -364,10 +365,10 @@ KNodePtr linkedListMergeSort(KNodePtr head) {
     
     splitLinkedListInToTwoHalves(head, a, b);
     if (a->next != nullptr) {
-        linkedListMergeSort(a);
+        a = linkedListMergeSort(a);
     }
     if (b->next != nullptr) {
-        linkedListMergeSort(b);
+        b = linkedListMergeSort(b);
     }
     head = mergeLinkedLists(a, b);
     return head;
